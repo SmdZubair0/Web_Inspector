@@ -1,0 +1,22 @@
+set hard and soft parameter
+if soft and a locator is given for multiple element, then if the required element is first of those element, select this locator
+
+
+prioritise with length
+
+implement multiprocessing
+
+
+
+
+it is made using langgraph - in input, complete dom of page is read and stored in file and then into state['dom'] element to which we need to find locator is stored in state['raw_element'] and elmenet dom which contains element direct siblings, its parent, its parent's direct sibling and it's parent's parent is stored in state['raw_element_dom"] - in first node, we convert element and element_dom into etree objects and store in state['element'] and state['element_dom'] - in next node (generate_locators) I pass 3 strategies which are Id, cssSelector and Xpath, each will generate the locators of each type using the code (written by me) with all possible combinations and stores into state['locators'] as list of dicts where each dict will have 'type' and 'locators' as list of locators - in next node (check_uniqueness) i pass to a function and check if the locator is unique and then select at max 5 of each type and restore in state['locators'] - in next node I generate name of the element using some LLM. - finally pass the locators and name as output
+
+
+implement dataclass instead of TypedDict in dataModels
+
+
+impolement save to file for FAISS
+
+implement search with LLM
+
+add file reading along with string reading
