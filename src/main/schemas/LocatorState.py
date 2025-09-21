@@ -1,4 +1,4 @@
-from trio import Path
+from pathlib import Path
 from lxml import etree
 from typing import TypedDict, List, Dict
 
@@ -15,4 +15,5 @@ class LocatorState(TypedDict):
 
     name : str
     
+
     locators : List[Dict[str, List[str]]]
